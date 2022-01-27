@@ -1,20 +1,23 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import Head from "next/head";
+import Layout, { siteTitle } from "../components/layout";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-    </Layout>
-  )
+    return (
+        <Layout home>
+            <Head>
+                <title>{siteTitle}</title>
+            </Head>
+            <section className={utilStyles.headingMd}>
+                <p>Here is basic Next JS app, please imagine that you are building an IMDB clone. Please do the following;</p>
+                <ul>
+                    <li>Render a list of available movies (found in the /public/movieList dir) then center and style the content</li>
+                    <li>Redesign the landing page (this page), add some photos, and make it look more appealing</li>
+                </ul>
+
+                <Link href="/movies">Movie List</Link>
+            </section>
+        </Layout>
+    );
 }
